@@ -1,5 +1,5 @@
 FROM golang:1.21-alpine
-LABEL maintainer="sudorandom <https://github.com/evepraisal/go-evepraisal>"
+LABEL maintainer="SmanUK88 <https://github.com/SmanUK1988/evepraisal>"
 WORKDIR $GOPATH/src/github.com/evepraisal/go-evepraisal
 RUN apk --update add --no-cache --virtual build-dependencies git gcc musl-dev make bash && \
     git clone https://github.com/evepraisal/go-evepraisal.git . && \
