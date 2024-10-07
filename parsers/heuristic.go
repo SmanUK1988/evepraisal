@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"strings"
 
-	"github.com/evepraisal/go-evepraisal/typedb"
+	"github.com/SmanUK1988/evepraisal/typedb"
 )
 
 const (
