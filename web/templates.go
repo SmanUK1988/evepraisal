@@ -12,7 +12,7 @@ import (
 
 	"github.com/davecgh/go-spew/spew"
 	"github.com/dustin/go-humanize"
-	"github.com/evepraisal/go-evepraisal"
+	"github.com/SmanUK1988/evepraisal"
 	"github.com/pquerna/ffjson/ffjson"
 )
 
