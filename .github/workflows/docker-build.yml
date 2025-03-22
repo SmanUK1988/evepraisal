@@ -1,0 +1,30 @@
+name: Build Docker Image and Export TAR
+
+on:
+  workflow_dispatch:  # allows you to manually trigger this workflow
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Build Docker image
+        run: |
+          docker build -t evepraisal:latest .
+
+      - name: Save Docker image to tar file
+        run: |
+          mkdir -p output
+          docker save -o output/evepraisal.tar evepraisal:latest
+
+      - name: Upload TAR file as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: evepraisal-tar
+          path: output/evepraisal.tar
